@@ -35,13 +35,13 @@
             },
             resetName() {
                 this.name = 'Marko';
-                this.$emit('nameWasReset', this.name);
-            },
-            created() {
-                eventBus.$on('ageWasEdited', (data) => {
-                    this.userAge = data;
-                });
+                eventBus.$emit('nameWasReset', this.name);
             }
+        },
+        created() {
+            eventBus.$on('ageWasEdited', (data) => {
+                this.userAge = data;
+            });
         }
     }
 </script>
